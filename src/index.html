@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- <link rel="stylesheet" href="./node_modules/photon-css/dist/photon.css"> -->
+  <link rel="stylesheet" href="../photon-0.1.2-dist/css/photon.min.css">
+
+  <title>POS!</title>
+</head>
+
+<body>
+  <div class="window">
+    <header class="toolbar toolbar-header">
+      <h1 class="flex-center-header">
+        Welcome to POS
+      </h1>
+    </header>
+    <div class="tab-group">
+      <div class="tab-item" id="usersButton">
+        <!-- <span class="icon icon-cancel icon-close-tab"></span> -->
+        Users
+      </div>
+      <div class="tab-item" id="companiesButton">
+        <!-- <span class="icon icon-cancel icon-close-tab"></span> -->
+        Insurance Companies
+      </div>
+      <div class="tab-item" id="carsButton">
+        <!-- <span class="icon icon-cancel icon-close-tab"></span> -->
+        Cars
+      </div>
+      <div class="tab-item" id="customersButton">
+        <!-- <span class="icon icon-cancel icon-close-tab"></span> -->
+        Customers
+      </div>
+      <div class="tab-item" id="partsButton">
+        <!-- <span class="icon icon-cancel icon-close-tab"></span> -->
+        Part Reports
+      </div>
+      <div class="tab-item" id="billingsButton">
+        <!-- <span class="icon icon-cancel icon-close-tab"></span> -->
+        Billing
+      </div>
+
+    </div>
+    <div class="window-content">
+      <div class="flex-center pane-group">
+        <form id="authForm" class="flex-col">
+          <h6 class="text-center">Login</h6>
+          <input type="text" id="email" placeholder="Email...">
+          <input type="text" id="password" placeholder="Password...">
+          <input type="submit" value="Login" class="btn btn-primary">
+        </form>
+        <div id="unlock" class="hidden">
+          <div class="flex-center">
+            <img src="./assets/key.png" class="img" alt="Unlock Image">
+            <h3>Secure Pass To Database</h3>
+          </div>
+          <button class="btn btn-negative" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+    <footer class="toolbar toolbar-footer">
+      <h1 class="title" id="auth">
+        Not Logged In
+      </h1>
+    </footer>
+  </div>
+  <script src="./renderer.js"></script>
+
+</body>
+
+</html>

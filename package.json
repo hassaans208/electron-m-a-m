@@ -1,0 +1,27 @@
+{
+  "name": "pos",
+  "version": "1.0.0",
+  "description": "point of sale system",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron .",
+    "server": "nodemon --exec electron .",
+    "migrate": "node ./src/database/migrations.js"
+  },
+  "author": "Hassaan Sharqi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.1.2",
+    "nodemon": "^2.0.21",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-loader": "^7.0.2",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "sqlite3": "^5.1.4"
+  }
+}
